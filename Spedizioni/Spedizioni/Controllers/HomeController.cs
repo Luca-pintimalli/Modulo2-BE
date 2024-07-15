@@ -13,7 +13,7 @@ public class HomeController : Controller
     {
         _logger = logger;
         var connection = new System.Data.SqlClient.SqlConnection(conf.GetConnectionString("AppDb"));
-        connection.OpenO;
+        connection.Open();
     }
 
     public IActionResult Index()

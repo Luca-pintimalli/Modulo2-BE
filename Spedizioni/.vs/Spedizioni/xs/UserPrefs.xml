@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{B25FFC45-D368-4B6C-A955-BBCD823CE002}|https">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Spedizioni/Controllers/HomeController.cs">
+    <Files>
+      <File FileName="Spedizioni/Controllers/HomeController.cs" Line="18" Column="1" />
+      <File FileName="Spedizioni/appsettings.json" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Spedizioni">
+            <Node name="Spedizioni" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Spedizioni PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>
