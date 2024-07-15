@@ -26,11 +26,32 @@ public class HomeController : Controller
         return View();
     }
 
+
+    ///-----------PAGINA CONTATTI------------------------------------------------
     public IActionResult Contatti()
     {
         return View();
     }
 
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Submit(Contact contact)
+    {
+        if (ModelState.IsValid)
+        {
+            // Qui puoi aggiungere il codice per gestire il contatto, come inviare un'email
+            TempData["SuccessMessage"] = "Il tuo messaggio è stato inviato con successo!";
+            return RedirectToAction("Index");
+        }
+
+        return View("Index", contact);
+    }
+
+
+
+
+
+    /*--------------------------------------------------------*/
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
