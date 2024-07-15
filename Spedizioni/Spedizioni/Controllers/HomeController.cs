@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Spedizioni.Models;
 
 namespace Spedizioni.Controllers;
@@ -8,9 +9,11 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, IConfiguration conf)
     {
         _logger = logger;
+        var connection = new System.Data.SqlClient.SqlConnection(conf.GetConnectionString("AppDb"));
+        connection.OpenO;
     }
 
     public IActionResult Index()

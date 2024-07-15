@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/lucapintimalli/Documents/GitHub/Spedizioni/Spedizioni/Spedizioni.csproj",
+      "projectUniqueName": "/Users/lucapintimalli/Documents/GitHub/BW-Backend-U1/BW-Backend-U1/BW_U_1/BW_U_1/Modulo2-BE/Spedizioni/Spedizioni/Spedizioni.csproj",
       "projectName": "Spedizioni",
-      "projectPath": "/Users/lucapintimalli/Documents/GitHub/Spedizioni/Spedizioni/Spedizioni.csproj",
+      "projectPath": "/Users/lucapintimalli/Documents/GitHub/BW-Backend-U1/BW-Backend-U1/BW_U_1/BW_U_1/Modulo2-BE/Spedizioni/Spedizioni/Spedizioni.csproj",
       "packagesPath": "/Users/lucapintimalli/.nuget/packages/",
-      "outputPath": "/Users/lucapintimalli/Documents/GitHub/Spedizioni/Spedizioni/obj/",
+      "outputPath": "/Users/lucapintimalli/Documents/GitHub/BW-Backend-U1/BW-Backend-U1/BW_U_1/BW_U_1/Modulo2-BE/Spedizioni/Spedizioni/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/lucapintimalli/.nuget/NuGet/NuGet.Config"
