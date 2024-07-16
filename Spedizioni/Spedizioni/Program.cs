@@ -7,22 +7,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-
-//CONFIGURAZIONE DELL'AUTORIZZAZIONE
+// Configurazione dell'autenticazione
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opt =>
 {
-    opt.LoginPath = "/Account/Login";
+    opt.LoginPath = "/Account/Login"; // Se l'utente non è loggato si ritroverà direttamente qui
 });
 
-
-
-//CONFIGURAZIONE DEL SERVIZIO DI GESTIONE DELLE AUTENTIFICAZIONI
+// Configurazione del servizio di gestione delle autenticazioni
 builder.Services.AddScoped<IAuthService, AuthService>();
-
-
-
-
-
 
 var app = builder.Build();
 
@@ -30,7 +22,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -39,6 +30,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication(); // Aggiungi questa riga per usare l'autenticazione
 app.UseAuthorization();
 
 app.MapControllerRoute(

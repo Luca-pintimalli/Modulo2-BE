@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Spedizioni.Models;
@@ -9,13 +10,14 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger, IConfiguration conf)
+    public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
-        var connection = new System.Data.SqlClient.SqlConnection(conf.GetConnectionString("AppDb"));
-        connection.Open();
+        
     }
 
+
+    [Authorize] //MI PERMETTE DI NON ENTRARE NEL INDEX SE NON SONO LOGGATO
     public IActionResult Index()
     {
         return View();

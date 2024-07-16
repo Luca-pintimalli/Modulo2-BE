@@ -12,36 +12,49 @@ namespace Spedizioni.Controllers
 	{
 
         private readonly IAuthService authenticationService;
+        private readonly ILogger<AccountController> logger;
 
 
-        public AccountController(IAuthService authenticationService)
-		{
+
+        public AccountController(IAuthService authenticationService, ILogger<AccountController> logger)
+        {
 			this.authenticationService = authenticationService;
-		}
+            this.logger = logger;
+
+        }
+
+        public IActionResult Auth()
+        {
+            return View();
+        }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
 
 
-		public IActionResult Login()
-		{
-			return View();
-		}
 
 
+        //GESTIONE LOGIN 
         [HttpPost]
-        public IActionResult Login(ApplicationUser user)
+        public async Task<IActionResult> Login(ApplicationUser user)
         {
             try
             {
                 var u = authenticationService.Login(user.UserName, user.Password);
 
+                if (u == null) return RedirectToAction("Index", "Home");
+
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name, u.UserName),
+                    new Claim(ClaimTypes.Name, $"Utente : {u.UserName}"), //ABBIAMO ASSOCIATO ALLA CLAIM ANCHE (UTENTE:) COSI NON COMPARIRA' SOLO IL NOME DEL UTENTE MA ANCHE UTENTE:NOMEUTENTE 
                     new Claim(ClaimTypes.Role, "Amministratore") //DEFINISCO IL RUOLO
                 };
 
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
-                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
                     new ClaimsPrincipal(identity)
 
                     );
@@ -55,6 +68,13 @@ namespace Spedizioni.Controllers
         }
 
 
+
+        //GESTIONE LOGOUT
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Index", "Home");
+        }
 
 
     }
