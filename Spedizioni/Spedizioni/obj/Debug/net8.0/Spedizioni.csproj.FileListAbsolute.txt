@@ -37,3 +37,4 @@
 /Users/lucapintimalli/Documents/GitHub/BW-Backend-U1/BW-Backend-U1/BW_U_1/BW_U_1/Modulo2-BE/Spedizioni/Spedizioni/obj/Debug/net8.0/Spedizioni.pdb
 /Users/lucapintimalli/Documents/GitHub/BW-Backend-U1/BW-Backend-U1/BW_U_1/BW_U_1/Modulo2-BE/Spedizioni/Spedizioni/obj/Debug/net8.0/Spedizioni.genruntimeconfig.cache
 /Users/lucapintimalli/Documents/GitHub/BW-Backend-U1/BW-Backend-U1/BW_U_1/BW_U_1/Modulo2-BE/Spedizioni/Spedizioni/obj/Debug/net8.0/ref/Spedizioni.dll
+/Users/lucapintimalli/Documents/GitHub/BW-Backend-U1/BW-Backend-U1/BW_U_1/BW_U_1/Modulo2-BE/Spedizioni/Spedizioni/bin/Debug/net8.0/System.Security.Permissions.dll

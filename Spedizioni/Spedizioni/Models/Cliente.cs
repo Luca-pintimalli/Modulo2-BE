@@ -17,6 +17,9 @@ namespace Spedizioni.Models
 
             [Required]
             public string TipoCliente { get; set; } // Privato o Azienda
+
+          
+
         
     }
 }

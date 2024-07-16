@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Spedizioni")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2633f9510a1ecb09875a4bc2b4127b3356aef2f8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4f992c046d9a9f4974036f68d472db947f6387c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Spedizioni")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Spedizioni")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
