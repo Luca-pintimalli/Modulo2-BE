@@ -13,10 +13,8 @@ public class HomeController : Controller
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
-        
+
     }
-
-
     [Authorize] //MI PERMETTE DI NON ENTRARE NEL INDEX SE NON SONO LOGGATO
     public IActionResult Index()
     {

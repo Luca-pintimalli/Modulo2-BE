@@ -1,49 +1,49 @@
 ﻿<Properties StartupConfiguration="{B25FFC45-D368-4B6C-A955-BBCD823CE002}|https">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/lucapintimalli/Documents/GitHub/BW-Backend-U1/BW-Backend-U1/BW_U_1/BW_U_1/Modulo2-BE/Spedizioni/Spedizioni/Models/AggiornamentoSpedizione.cs" relfile="Spedizioni/Models/AggiornamentoSpedizione.cs" line="25" column="1" />
-      <Breakpoint file="/Users/lucapintimalli/Documents/GitHub/BW-Backend-U1/BW-Backend-U1/BW_U_1/BW_U_1/Modulo2-BE/Spedizioni/Spedizioni/Views/Account/Login.cshtml" relfile="Spedizioni/Views/Account/Login.cshtml" line="12" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Spedizioni/Program.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Spedizioni/Controllers/AccountController.cs">
     <Files>
-      <File FileName="Spedizioni/Views/Home/Index.cshtml" Line="14" Column="1" />
-      <File FileName="Spedizioni/Controllers/AccountController.cs" Line="40" Column="19" />
-      <File FileName="Spedizioni/Views/Home/Login.cshtml" Line="15" Column="1" />
-      <File FileName="Spedizioni/Models/AggiornamentoSpedizione.cs" Line="1" Column="1" />
-      <File FileName="Spedizioni/Views/_ViewImports.cshtml" Line="1" Column="1" />
-      <File FileName="Spedizioni/Views/_ViewStart.cshtml" Line="1" Column="1" />
-      <File FileName="Spedizioni/Program.cs" Line="41" Column="1" />
-      <File FileName="Spedizioni/Services/AuthService.cs" Line="41" Column="1" />
-      <File FileName="Spedizioni/Controllers/HomeController.cs" Line="13" Column="57" />
-      <File FileName="Spedizioni/Views/Shared/_Layout.cshtml.css" Line="1" Column="1" />
-      <File FileName="Spedizioni/Views/Shared/_Layout.cshtml" Line="15" Column="1" />
-      <File FileName="Spedizioni/Models/Cliente.cs" Line="1" Column="1" />
-      <File FileName="Spedizioni/Services/ApplicationUser.cs" Line="1" Column="1" />
-      <File FileName="Spedizioni/appsettings.json" Line="1" Column="1" />
-      <File FileName="Spedizioni/Services/IAuthService.cs" Line="1" Column="1" />
+      <File FileName="Spedizioni/Views/Home/Index.cshtml" />
+      <File FileName="Spedizioni/Controllers/AccountController.cs" Line="78" Column="1" />
+      <File FileName="Spedizioni/Models/AggiornamentoSpedizione.cs" />
+      <File FileName="Spedizioni/Views/_ViewImports.cshtml" />
+      <File FileName="Spedizioni/Views/_ViewStart.cshtml" />
+      <File FileName="Spedizioni/Program.cs" />
+      <File FileName="Spedizioni/Services/AuthService.cs" />
+      <File FileName="Spedizioni/Controllers/HomeController.cs" />
+      <File FileName="Spedizioni/Views/Shared/_Layout.cshtml.css" />
+      <File FileName="Spedizioni/Views/Shared/_Layout.cshtml" />
+      <File FileName="Spedizioni/Models/Cliente.cs" />
+      <File FileName="Spedizioni/Services/ApplicationUser.cs" />
+      <File FileName="Spedizioni/appsettings.json" />
+      <File FileName="Spedizioni/Services/IAuthService.cs" />
+      <File FileName="Spedizioni/Views/Account/Auth.cshtml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Spedizioni">
-            <Node name="Spedizioni">
-              <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Views">
-                <Node name="Shared" expanded="True">
-                  <Node name="_Layout.cshtml" expanded="True" />
-                </Node>
+          <Node name="Spedizioni" expanded="True">
+            <Node name="Spedizioni" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="HomeController.cs" selected="True" />
               </Node>
-              <Node name="Program.cs" selected="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.Spedizioni PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/lucapintimalli/Documents/GitHub/BW-Backend-U1/BW-Backend-U1/BW_U_1/BW_U_1/Modulo2-BE/Spedizioni/Spedizioni/Models/AggiornamentoSpedizione.cs" relfile="Spedizioni/Models/AggiornamentoSpedizione.cs" line="25" column="1" />
+      <Breakpoint file="/Users/lucapintimalli/Documents/GitHub/BW-Backend-U1/BW-Backend-U1/BW_U_1/BW_U_1/Modulo2-BE/Spedizioni/Spedizioni/Views/Account/Login.cshtml" relfile="Spedizioni/Views/Account/Login.cshtml" line="12" column="1" />
+      <Breakpoint file="/Users/lucapintimalli/Documents/GitHub/BW-Backend-U1/BW-Backend-U1/BW_U_1/BW_U_1/Modulo2-BE/Spedizioni/Spedizioni/Controllers/AccountController.cs" relfile="Spedizioni/Controllers/AccountController.cs" line="60" column="1" />
+      <Breakpoint file="/Users/lucapintimalli/Documents/GitHub/BW-Backend-U1/BW-Backend-U1/BW_U_1/BW_U_1/Modulo2-BE/Spedizioni/Spedizioni/Controllers/AccountController.cs" relfile="Spedizioni/Controllers/AccountController.cs" line="61" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

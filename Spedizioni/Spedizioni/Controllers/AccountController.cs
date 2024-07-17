@@ -1,6 +1,4 @@
-﻿
-
-using System.Security.Claims;
+﻿using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
@@ -8,19 +6,15 @@ using Spedizioni.Models;
 
 namespace Spedizioni.Controllers
 {
-	public class AccountController : Controller
-	{
-
+    public class AccountController : Controller
+    {
         private readonly IAuthService authenticationService;
         private readonly ILogger<AccountController> logger;
 
-
-
         public AccountController(IAuthService authenticationService, ILogger<AccountController> logger)
         {
-			this.authenticationService = authenticationService;
+            this.authenticationService = authenticationService;
             this.logger = logger;
-
         }
 
         public IActionResult Auth()
@@ -35,48 +29,49 @@ namespace Spedizioni.Controllers
 
 
 
-
-        //GESTIONE LOGIN 
+        //GESTIONE LOGIN
         [HttpPost]
         public async Task<IActionResult> Login(ApplicationUser user)
         {
             try
             {
+
                 var u = authenticationService.Login(user.UserName, user.Password);
 
-                if (u == null) return RedirectToAction("Index", "Home");
+                if (u == null)
+                {
+                    return RedirectToAction("Login", "Account"); // Torna alla pagina di login
+                }
+
 
                 var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, $"Utente : {u.UserName}"), //ABBIAMO ASSOCIATO ALLA CLAIM ANCHE (UTENTE:) COSI NON COMPARIRA' SOLO IL NOME DEL UTENTE MA ANCHE UTENTE:NOMEUTENTE 
-                    new Claim(ClaimTypes.Role, "Amministratore") //DEFINISCO IL RUOLO
-                };
+        {
+            new Claim(ClaimTypes.Name, $"Utente : {u.UserName}"),
+            new Claim(ClaimTypes.Role, "Amministratore")
+        };
 
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
-                    new ClaimsPrincipal(identity)
-
-                    );
+                    new ClaimsPrincipal(identity));
 
             }
             catch (Exception ex)
             {
-
+               
             }
+
             return RedirectToAction("Index", "Home");
         }
 
 
 
-        //GESTIONE LOGOUT
+        //gestione logout 
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }
-
-
     }
 }
 
