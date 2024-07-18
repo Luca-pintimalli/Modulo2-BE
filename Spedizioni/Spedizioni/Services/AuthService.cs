@@ -7,7 +7,8 @@ namespace Spedizioni.Services
     public class AuthService : IAuthService
     {
         private string connectionString;
-        private const string Login_Command = "SELECT UserName FROM Auth WHERE UserName = @UserName AND Password = @Password";
+        private const string Login_Command = "SELECT UserId, UserName FROM Auth WHERE UserName = @UserName AND Password = @Password";
+        private const string ROLES_COMMAND = "SELECT RoleName FROM Roles WHERE RoleID = @RoleID";
 
         public AuthService(IConfiguration config)
         {
@@ -28,15 +29,19 @@ namespace Spedizioni.Services
                 using var r = cmd.ExecuteReader();
                 if (r.Read())
                 {
-                    Console.WriteLine("User authenticated successfully.");
-                    return new ApplicationUser { UserName = username, Password = password };
-                }
-                else
-                {
-                    Console.WriteLine("User authentication failed.");
-                }
+                    var u = new ApplicationUser { UserId = r.GetInt32(0), Password = password, UserName = username };
+                    r.Close();
+                    using var roleCmd = new SqlCommand(ROLES_COMMAND, conn);
+                    roleCmd.Parameters.AddWithValue("@RoleID", u.RoleID);
+                    using var re = roleCmd.ExecuteReader();
+                    while (re.Read())
+                    {
+                        u.Roles.Add(r.GetString(0));
+                    }
+                    return u;
+                }   
             }
-            catch (Exception ex)
+                catch (Exception ex)
             {
 
             }

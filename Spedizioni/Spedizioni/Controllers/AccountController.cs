@@ -47,8 +47,8 @@ namespace Spedizioni.Controllers
                 var claims = new List<Claim>
         {
             new Claim(ClaimTypes.Name, $"Utente : {u.UserName}"),
-            new Claim(ClaimTypes.Role, "Amministratore")
         };
+                u.Roles.ForEach(r => claims.Add(new Claim(ClaimTypes.Role, r)));
 
                 var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
 
